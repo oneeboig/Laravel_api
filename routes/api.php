@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get("data/{id?}",[DummyApi::class,'getdata']);
+Route::post("addData", [DummyApi::class, 'addData']);
