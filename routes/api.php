@@ -22,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get("data/{id?}",[DummyApi::class,'getdata']);
 Route::post("addData", [DummyApi::class, 'addData']);
 Route::put("update", [DummyApi::class, 'updatedata']);
+Route::get("search/{name}",[DummyApi::class,'searchdata']);
+Route::get("CharaSearch/{name}",[DummyApi::class,'CharaSearchData']);
+Route::delete("delete/{id}", [DummyApi::class,'deletedata']);
