@@ -22,4 +22,16 @@ class DummyApi extends Controller
             return ["result"=>"Try again"];
         }
     }
+    public function updatedata(Request $req){
+        $user = usersdata::find($req->id);
+        $user->Name=$req->Name;
+        $user->Email=$req->Email;
+        $result=$user->save();
+        if($result){
+            return ["result"=>"data updated sucessfully"];
+        }
+        else{
+            return ["result"=>"Try again"];
+        }
+    }
 }
